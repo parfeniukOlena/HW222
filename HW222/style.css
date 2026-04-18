@@ -1,0 +1,73 @@
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* одна колонка, вся ширина */
+    grid-template-rows: 70px auto auto 1fr 50px;
+    grid-template-areas:
+        "header"
+        "hero"
+        "about"
+        "gallery"
+        "footer";
+    min-height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: rgba(0, 0, 255, 0.585);
+}
+
+.hero {
+    grid-area: hero;
+    background-color: rgba(0, 128, 0, 0.475);
+}
+
+.about {
+    grid-area: about;
+    background-color: rgba(255, 0, 0, 0.489);
+}
+
+.gallery {
+    grid-area: gallery;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: rgba(0, 255, 255, 0.484);
+    gap: 12px;
+    padding: 20px;
+}
+
+.featured {
+    grid-column: span 2;
+    /* займає 2 колонки */
+}
+
+.card {
+    display: grid;
+    /* додано */
+    grid-template-rows: auto 1fr auto;
+    width: 100%;
+    /* було 140px — тепер займає всю колонку */
+    height: 100px;
+    border: 2px solid black;
+    /* margin: 12px — прибрано, є gap на gallery */
+
+}
+
+button {
+    
+    background-color: rgb(25, 177, 219);
+    color: white;
+    padding: 10px 35px;
+    border-radius: 5px;
+
+
+
+
+
+}
+
+
+.footer {
+    grid-area: footer;
+    background-color: rgba(128, 128, 128, 0.538);
+}
